@@ -1,0 +1,81 @@
+# def get_antes_parenteses(self, atomos):
+    #     #antes
+    #     atomo_antes_par   = re.findall("(.*?)\s*\(", str(atomos))
+    #     atomo_antes_par   = re.findall("[A-Za-z]+", str(atomo_antes_par))
+    #     numero_antes_par  = re.findall("(.*?)*\(", str(atomos))
+    #     numero_antes_par  = re.findall("[0-9]+", str(numero_antes_par))
+    #     if not numero_antes_par:
+    #         numero_antes_par.append('1')
+        
+    #     return atomo_antes_par, numero_antes_par
+    
+    # def get_dentro_parenteses(self, atomos):
+    #     numero_dentro_par = re.findall("\((.*?)\)", str(atomos))
+    #     numero_dentro_par = re.findall("[0-9]+", str(numero_dentro_par))
+    #     atomo_dentro_par  = re.findall("\((.*?)\)", str(atomos))
+    #     atomo_dentro_par  = re.findall("[A-Za-z]+", str(atomo_dentro_par))
+    #     if not numero_dentro_par:
+    #         for ele in atomo_dentro_par:
+    #             numero_dentro_par.append('1')
+        
+    #     return atomo_dentro_par, numero_dentro_par
+    
+    # def get_depois_parenteses(self, atomos):
+    #     numero_depois_par = re.findall("[^)]+$", str(atomos))
+    #     numero_depois_par = re.findall("[0-9]+", str(numero_depois_par))
+    #     atomo_depois_par  = re.findall("[^)]+$", str(atomos)) 
+    #     atomo_depois_par  = re.findall("([A-Za-z])+", str(atomo_depois_par))
+    #     if 'n' in atomo_depois_par:
+    #         atomo_depois_par.remove('n')
+        
+    #     return atomo_depois_par, numero_depois_par
+
+    # def prepara_para_escrita(self, antes, dentro, depois, nome_arquivo):
+    #     elem =[]
+    #     aa = []
+    #     bb = []
+    #     print (*dentro)
+    #     # for ele in dentro[1]:
+    #     #     ele  = int(ele)
+    #     #     ele *= int(depois[1])
+    #     #     elem.append(ele)
+        
+    #     print('ok')
+    #     # print(elem)
+    #     # atomo_antes_par  = zip(antes[0], antes[1])
+    #     # atomo_dentro_par = zip(dentro[0], elem)
+          # resultado = zip(*atomo_antes_par, *atomo_dentro_par)
+    #     self.salva_no_arquivo(resultado)  
+    
+    # def salva_no_arquivo(self, resultado, nome_arquivo):
+        # nome_arquivo_saida = str(nome_arquivo.replace('in', 'out'))
+        # arquivo = open(nome_arquivo_saida, 'w+')
+        # arquivo.write(str(resultado))
+
+     # def get_numeros(self, text, nome_arquivo):
+        atomos = re.sub(r'([A-Z])', r' \1', str(text))
+        # antes  = []
+        # dentro = []
+        # depois = []
+        if ')' not in str(atomos):
+            return self.salva_no_arquivo(atomos, nome_arquivo)
+        elif ')' in str(atomos):
+            #antes
+            # self.get_antes_parenteses(atomos)
+            #dentro
+            # self.get_dentro_parenteses(atomos)
+            #depois
+            # self.get_depois_parenteses(atomos)
+
+            # antes  = self.get_antes_parenteses
+            # dentro = self.get_dentro_parenteses
+            # depois = self.get_depois_parenteses
+            # self.prepara_para_escrita(antes, dentro, depois, nome_arquivo)
+
+    # def ler_arquivo(self, nome_arquivo):
+        # try:
+            # arquivo = open(nome_arquivo , 'r')
+            # text = arquivo.readline()
+        # except FileNotFoundError:
+            # print('erro ao abrir o arquivo')    
+        # self.get_numeros(text, nome_arquivo)
